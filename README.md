@@ -1,59 +1,105 @@
- README for "Movie Ticket Reservation System"
+# Movie Ticket Reservation System
 
- Movie Ticket Reservation System
+## Overview
 
- Overview
-This project is a C++ implementation of a movie ticket reservation system, designed to manage multiple cinema screens and the reservation of seats within those screens. The system supports different types of commands such as adding a screen, reserving seats, checking unreserved seats, and suggesting contiguous unreserved seats based on user input.
+This project is a **C** implementation of a **Movie Ticket Reservation System**, designed to manage multiple cinema screens and the reservation of seats within those screens. The system supports various commands such as adding a screen, reserving seats, checking unreserved seats, and suggesting contiguous unreserved seats based on user input.
 
- Features:
-- Add Screen: Allows adding a new screen to the system with a set number of rows, columns, and aisle seats.
-- Reserve Seat: Reserves specific seats in a screen for a given row.
-- Get Unreserved Seats: Displays unreserved seats for a specific row in a screen.
-- Suggest Contiguous Seats: Suggests a set of contiguous unreserved seats, considering aisle seats and a user's preferred seat.
+## Features
 
- Installation
+- **Add Screen**: Allows adding a new screen to the system with a set number of rows, columns, and aisle seats.
+- **Reserve Seat**: Reserves specific seats in a screen for a given row.
+- **Get Unreserved Seats**: Displays unreserved seats for a specific row in a screen.
+- **Suggest Contiguous Seats**: Suggests a set of contiguous unreserved seats, considering aisle seats and a user's preferred seat.
 
-1. Clone the repository:
-   ```
-   git clone <repository_url>
-   cd movie-ticket-res
-   ```
+## Installation
 
-2.Compile the program:
-   ```
-   g++ -o movie_ticket_reservation main.cpp
-   ```
+### Step 1: Clone the repository
 
-3. Run the program:
-   ```
-   ./movie_ticket_reservation
-   ```
+Clone the repository to your local machine using the following command:
+
+```bash
+git clone <repository_url>
+cd movie-ticket-reservation
+```
+
+### Step 2: Compile the program
+
+To compile the program, use the following command:
+
+```bash
+gcc -o movie_ticket_reservation main.c
+```
+
+### Step 3: Run the program
+
+To run the compiled program, use:
+
+```bash
+./movie_ticket_reservation
+```
 
 ## Usage
+
 To interact with the system, input the following commands as per the example:
 
-1. Add Screen:
-   ```
-   add-screen <name-of-screen> <number-of-rows> <number-of-columns> <space-separated-aisle-seats>
-   ```
+### Add Screen
 
-2. Reserve Seat:
-   ```
-   reserve-seat <name-of-screen> <row-number> <space-separated-seats-to-be-reserved>
-   ```
+To add a new screen, use the following command:
 
-3. Get Unreserved Seats:
-   ```
-   get-unreserved-seats <name-of-screen> <row-number>
-   ```
+```
+add-screen <name-of-screen> <number-of-rows> <number-of-columns> <space-separated-aisle-seats>
+```
 
-4. Suggest Contiguous Seats:
-   ```
-   suggest-contiguous-seats <name-of-screen> <number-of-seats> <row-number> <choice-of-seat>
-   ```
+Example:
 
-Example
-Input:
+```
+add-screen Screen1 12 10 4 5 8 9
+```
+
+### Reserve Seat
+
+To reserve specific seats for a given row, use:
+
+```
+reserve-seat <name-of-screen> <row-number> <space-separated-seats-to-be-reserved>
+```
+
+Example:
+
+```
+reserve-seat Screen1 4 5 6 7
+```
+
+### Get Unreserved Seats
+
+To view unreserved seats for a specific row in a screen, use:
+
+```
+get-unreserved-seats <name-of-screen> <row-number>
+```
+
+Example:
+
+```
+get-unreserved-seats Screen2 13
+```
+
+### Suggest Contiguous Seats
+
+To suggest contiguous unreserved seats, use:
+
+```
+suggest-contiguous-seats <name-of-screen> <number-of-seats> <row-number> <choice-of-seat>
+```
+
+Example:
+
+```
+suggest-contiguous-seats Screen2 4 13 4
+```
+
+## Example Input
+
 ```
 7
 add-screen Screen1 12 10 4 5 8 9
@@ -65,7 +111,8 @@ get-unreserved-seats Screen2 13
 suggest-contiguous-seats Screen2 4 13 4
 ```
 
-Output:
+## Example Output
+
 ```
 success
 success
@@ -75,8 +122,11 @@ failure
 4 5 6
 ```
 
- Contributing
-1. Fork this repository.
-2. Create a new branch for your feature.
-3. Submit a pull request with a detailed description of the feature/bug.
+## Contributing
+
+1. **Fork** this repository.
+2. Create a **new branch** for your feature or bug fix.
+3. **Commit** your changes and make sure to include a detailed commit message.
+4. **Push** your changes to the forked repository.
+5. **Submit a pull request** with a detailed description of the feature or bug fix.
 
