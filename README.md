@@ -122,11 +122,4 @@ failure
 4 5 6
 ```
 
-## Contributing
-
-1. **Fork** this repository.
-2. Create a **new branch** for your feature or bug fix.
-3. **Commit** your changes and make sure to include a detailed commit message.
-4. **Push** your changes to the forked repository.
-5. **Submit a pull request** with a detailed description of the feature or bug fix.
 
